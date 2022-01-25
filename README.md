@@ -43,19 +43,19 @@ Each friend object has the format:
 
 ### Task 2: Project Requirements
 #### Build the login component
-* [ ] Use the [mockup provided](./login_mockup.png) to build out a simple login component.
-* [ ] In `App.js`, add a route to allow this component to be displayed when navigating to `/` or `/login`
+* [X] Use the [mockup provided](./login_mockup.png) to build out a simple login component.
+* [X] In `App.js`, add a route to allow this component to be displayed when navigating to `/` or `/login`
 * [ ] When submitting your login form, save the token returned to localStorage and redirect to the FriendsList route.
 
 #### Build the friendslist component
-* [ ] Use the [mockup provided](./friendslist_mockup.png) to build out a simple list component made to display all friends.
+* [X] Use the [mockup provided](./friendslist_mockup.png) to build out a simple list component made to display all friends.
 * [ ] When the component mounts, make a call to the api retrieving all friends. Remember that this is a protected route.
 * [ ] In `App.js`, add a route to allow this component to be displayed when navigating to `/friends`
 * [ ] In your login component, add code to your submission code the ability to redirect to your friendslist component.
 
 #### Build the addFriends component
-* [ ] Use the [mockup provided](./addfriends_mockup.png) to build out a simple component allowing you to collect data to add in a new friend.
-* [ ] The component should include a form with inputs for each friend attribute and a submit button.
+* [X] Use the [mockup provided](./addfriends_mockup.png) to build out a simple component allowing you to collect data to add in a new friend.
+* [X] The component should include a form with inputs for each friend attribute and a submit button.
 * [ ] When submitting the form, make a call to the approprate api endpoint with your new friend data. Remember that this is a protected route.
 * [ ] In `App.js`, add a route to allow this component to be displayed when navigating to `/friends/add`.
 
