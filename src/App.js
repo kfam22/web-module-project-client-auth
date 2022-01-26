@@ -4,7 +4,9 @@ import { BrowserRouter as Router, Route, Switch, Redirect, Link} from 'react-rou
 
 import Login from './components/Login';
 import FriendList from './components/FriendList';
-import AddFriend from './components/AddFriend'
+import AddFriend from './components/AddFriend';
+import Logout from './components/Logout';
+import PrivateRoute from './components/PrivateRoute';
 
 
 function App() {
@@ -16,15 +18,17 @@ function App() {
       {/* <Switch> */}
       <header>
         <h2>Friends Database</h2>
-        <Link to='/login'>Login.</Link>
-        <Link to='/friends'>Friendlist.</Link>
-        <Link to='/friends/add' >AddFriend.</Link>
-        <Link to='/'>Logout.</Link>
+        <Link to='/login' className='link'>Login.</Link>
+        <Link to='/friends' className='link'>Friendlist.</Link>
+        <Link to='/friends/add' className='link'>AddFriend.</Link>
+        <Link to='/logout' className='link'>Logout.</Link>
       </header>
       <Route exact path='/'><Login/></Route>
       <Route exact path='/login'><Redirect to='/'/></Route>
-      <Route exact path='/friends'><FriendList/> </Route>
-      <Route exact path='/friends/add'><AddFriend/></Route>
+
+      <PrivateRoute exact path='/friends' component={FriendList}/>
+      <PrivateRoute exact path='/friends/add' component={AddFriend}/>
+      <PrivateRoute exact path='/logout'component={Logout}/>
       {/* </Switch> */}
     </div>
     
